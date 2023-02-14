@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    main {
+      height: 90vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon{
+      transform-origin: center center;
+      animation: icon-animation 2s linear infinite;
+      transition-duration: 0.3s;
+      transition-property: opacity;
+      opacity: 0.7;
+    }
+    .icon:hover {
+      opacity: 1.0;
+      animation: icon-animation 0.5s linear infinite;
+    }
+
+    @keyframes icon-animation {
+      0% {
+        transform: rotate(8deg);
+      }
+      10% {
+        transform: rotate(6deg);
+      }
+      40% {
+        transform: rotate(-6deg);
+      }
+      50% {
+        transform: rotate(-8deg);
+      }
+      60% {
+        transform: rotate(-6deg);
+      }
+      90% {
+        transform: rotate(6deg);
+      }
+      100% {
+        transform: rotate(8deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="https://twitter.com/oddmutou">
+      <img src="/images/icon.png" class="icon" alt="@oddmutou" />
+    </a>
+  </main>
+</body>
+</html>
