@@ -13,62 +13,97 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
+  <title>oddmutou</title>
   <link rel="icon" href="/images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: black;
       color: white;
+      font-size: 0.9rem;
+      line-height: 3;
+      font-family: 'Kosugi Maru', sans-serif;
+      font-weight: 400;
     }
-    main {
+    a {
+      color: white;
+      transition-property: opacity;
+      opacity: 1.0;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+
+    .top {
       height: 90vh;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
-    .icon{
+    .top .icon{
       transform-origin: center center;
-      animation: icon-animation 2s linear infinite;
+      animation: icon-animation 2s infinite;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1.0)
       transition-duration: 0.3s;
-      transition-property: opacity;
-      opacity: 0.7;
     }
-    .icon:hover {
-      opacity: 1.0;
-      animation: icon-animation 0.5s linear infinite;
+    .top .icon:hover {
+      animation: icon-animation 0.4s linear infinite;
     }
-
     @keyframes icon-animation {
       0% {
-        transform: rotate(8deg);
-      }
-      10% {
-        transform: rotate(6deg);
-      }
-      40% {
-        transform: rotate(-6deg);
+        transform: rotate(4deg);
       }
       50% {
-        transform: rotate(-8deg);
-      }
-      60% {
-        transform: rotate(-6deg);
-      }
-      90% {
-        transform: rotate(6deg);
+        transform: rotate(-4deg);
       }
       100% {
-        transform: rotate(8deg);
+        transform: rotate(4deg);
       }
+    }
+
+    .detail {
+      width: 100%;
+      margin: 10vh 0;
+      display: flex;
+      justify-content: center;
+    }
+    .detail > * > * {
+      margin: 2em 0;
+    }
+    .detail h1 {
+      font-size: 1em;
+      font-weight: inherit;
+    }
+    .detail li, .detail ul {
+      margin: 0.5em 0;
+      padding: 0;
+      list-style: none;
     }
   </style>
 </head>
 <body>
-  <main>
+  <div class="top">
     <a href="https://twitter.com/oddmutou">
       <img src="/images/icon.png" class="icon" alt="@oddmutou" />
     </a>
-  </main>
+  </div>
+  <div class="detail">
+    <div>
+      <h1>
+        oddmutou
+      </h1>
+      <ul>
+        <li><a href="https://github.com/oddmutou" target="_blank">Github</a></li>
+        <li><a href="https://twitter.com/oddmutou" target="_blank">Twitter</a></li>
+        <li><a href="https://oddmutou.hatenablog.com/" target="_blank">はてなブログ</a></li>
+        <li><a href="https://www.amazon.co.jp/registry/wishlist/5YGELG2XZ4GV/" target="_blank">Amazon ほしい物リスト</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
